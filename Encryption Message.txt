@@ -1,13 +1,13 @@
-message = raw_input("What is your message? ")
+message = input("What is your message? ")
 
-shift = int(raw_input("What is your shift? "))
+shift = int(input("What is your shift? "))
 
-operation = int(raw_input("Encrypt or Decrypt: 1:Encrypt / 0:Decrypt"))
+operation = int(input("Encrypt or Decrypt: 1:Encrypt / 0:Decrypt"))
 
 
 if operation not in [1, 0]:
 
-  operation = (raw_input("Encrypt or Decrypt: 1:Encrypt / 0:Decrypt : "))
+  operation = (input("Encrypt or Decrypt: 1:Encrypt / 0:Decrypt : "))
 
 
 operation = bool(operation)
