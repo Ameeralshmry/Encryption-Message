@@ -1,0 +1,52 @@
+message = raw_input("What is your message? ")
+
+shift = int(raw_input("What is your shift? "))
+
+operation = int(raw_input("Encrypt or Decrypt: 1:Encrypt / 0:Decrypt"))
+
+
+if operation not in [1, 0]:
+
+  operation = (raw_input("Encrypt or Decrypt: 1:Encrypt / 0:Decrypt : "))
+
+
+operation = bool(operation)
+
+def cesar(message, shift):
+
+  cipherText = ""
+
+  for ch in message:
+
+    if ch.isalpha():
+
+
+      if operation:
+
+        stayInAlphabet = ord(ch) + shift
+
+      else:
+
+        stayInAlphabet = ord(ch) - shift
+
+
+      if stayInAlphabet > ord('z'):
+
+        stayInAlphabet -= 26
+
+      finalLetter = chr(stayInAlphabet)
+
+      cipherText += finalLetter
+
+  if operation:
+
+    print ("Your ciphered text is: ", cipherText)
+
+  else:
+
+    print ("Your decipherd text is: ", )
+
+  return cipherText
+
+
+cesar(message, shift)
